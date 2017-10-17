@@ -8,6 +8,7 @@ import numpy as np
 from ops import *
 from utils import *
 
+#采用类与对象定义GAN
 class GAN(object):
     def __init__(self, sess, epoch, batch_size, z_dim, dataset_name, checkpoint_dir, result_dir, log_dir):
         self.sess = sess
