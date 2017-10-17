@@ -18,7 +18,7 @@ class GAN(object):
         self.log_dir = log_dir
         self.epoch = epoch
         self.batch_size = batch_size
-        self.model_name = "GAN"     # name for checkpoint
+        self.model_name = "GAN"     # 命名保存点
 
         if dataset_name == 'mnist' or dataset_name == 'fashion-mnist':
             # parameters
@@ -27,14 +27,14 @@ class GAN(object):
             self.output_height = 28
             self.output_width = 28
 
-            self.z_dim = z_dim         # dimension of noise-vector
+            self.z_dim = z_dim         # 设置噪声的维度
             self.c_dim = 1
 
-            # train
+            # 训练
             self.learning_rate = 0.0002
             self.beta1 = 0.5
 
-            # test
+            # 测试
             self.sample_num = 64  # number of generated images to be saved
 
             # load mnist
